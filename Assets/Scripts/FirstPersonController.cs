@@ -156,7 +156,6 @@ public class FirstPersonController : MonoBehaviour
         characterController.height = targetHeight;
         characterController.center = targetCenter;
 
-
         duringCrouchAnimation = false;
     }
 }
