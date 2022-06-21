@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{AA71D63D-0504-D08A-3211-C7AA1430C054}</ProjectGuid>
+    <ProjectGuid>{8631C4EF-8C0A-BD29-9923-5A7A77FEEE25}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Scripts\Putilla.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sci-Fi Styled Modular Pack\Readme.txt" />
@@ -635,43 +636,43 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Timeline.Player.csproj">
-      <Project>{7FC99B23-4B68-DD07-83D8-14274A56DC5E}</Project>
+      <Project>{58C59B95-F785-BB9B-91DD-FAC633C112EB}</Project>
       <Name>Unity.Timeline.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
-      <Project>{E9B83D8A-2B52-CFB7-A995-5BBC817AE14E}</Project>
+      <Project>{284F78A0-0FC9-491F-E23D-D1CDF86B843B}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
-      <Project>{DDD64419-6063-FFC5-8E63-BFFA09D67A7C}</Project>
+      <Project>{9651D610-0710-AB10-A9B1-67B27A36AEB8}</Project>
       <Name>Unity.VisualScripting.Flow.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{1AC2A4B0-A880-2D4E-48B5-62C54A351F75}</Project>
+      <Project>{13F921AF-C12C-E351-EB46-7951190B0A67}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Player.csproj">
-      <Project>{B031D839-3490-43FA-44BB-4FB9D861091B}</Project>
+      <Project>{C18A2601-4AE2-9EF0-81F7-5B7124F5030D}</Project>
       <Name>Unity.Services.Core.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
-      <Project>{22040103-279F-0BFD-42E1-DB469BA1FD1E}</Project>
+      <Project>{EBA35374-6CC1-7420-8A4D-BA46E8A39034}</Project>
       <Name>Unity.VisualScripting.Core.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Analytics.Player.csproj">
-      <Project>{63B0CCF0-248E-E8B3-B690-852FA23A68CA}</Project>
+      <Project>{9074EEA5-F15D-FA75-DAF9-4F06BB0FA359}</Project>
       <Name>Unity.Services.Core.Analytics.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Postprocessing.Runtime.Player.csproj">
-      <Project>{057893F4-CDB9-13A7-C2FE-D1D03DAA4571}</Project>
+      <Project>{B1DAB015-7B22-0960-087A-BA16FA779970}</Project>
       <Name>Unity.Postprocessing.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Environments.Player.csproj">
-      <Project>{940EF8BA-185B-9B82-3BC1-3014FE6084BE}</Project>
+      <Project>{165FCCEC-AF0F-B44E-94CC-A67C66EBEE47}</Project>
       <Name>Unity.Services.Core.Environments.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
-      <Project>{E0F49418-D97B-66FC-4213-88E962113D9C}</Project>
+      <Project>{F061DF3F-52A6-F0C8-7C81-9192A795F661}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
     </ProjectReference>
   </ItemGroup>
