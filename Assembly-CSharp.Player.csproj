@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Scripts\OpenCloseDoor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sci-Fi Styled Modular Pack\Readme.txt" />

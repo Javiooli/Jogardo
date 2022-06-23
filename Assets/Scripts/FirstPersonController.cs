@@ -10,6 +10,8 @@ public class FirstPersonController : MonoBehaviour
     private bool shouldCrouch => (timeBetweenCrouches == timeToCrouch) && (holdToCrouch ? Input.GetKey(crouchKey) && !isCrouching && characterController.isGrounded :
                                    Input.GetKeyDown(crouchKey) && !duringCrouchAnimation && characterController.isGrounded && !(holdToSprint && isSprinting));
 
+    //[SerializeField] private Animator animator;
+
     [Header("Functional Options")]
     [SerializeField] private bool canSprint = true;
     [SerializeField] private bool canJump = true;
@@ -61,6 +63,8 @@ public class FirstPersonController : MonoBehaviour
     {
         playerCamera = GetComponentInChildren<Camera>();
         characterController = GetComponent<CharacterController>();
+        //animator = GetComponentInChildren<Animator>();
+        //animator.speed = 4.15f / timeToCrouch;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -95,8 +99,9 @@ public class FirstPersonController : MonoBehaviour
 
         float moveDirectionY = moveDirection.y;
         moveDirection = (transform.TransformDirection(Vector3.forward) * currentInput.x) + (transform.TransformDirection(Vector3.right) * currentInput.y);
+        if (!isCrouching && duringCrouchAnimation && moveDirection.x == 0) moveDirection += transform.TransformDirection(Vector3.forward) * 0.01f;
         moveDirection.y = moveDirectionY;
-        if (moveDirection.x + moveDirection.z == 0) sprintToggled = false;
+        if (!holdToSprint && moveDirection.x + moveDirection.z == 0) sprintToggled = false;
     }
 
     private void HandleMouseLook()
@@ -121,13 +126,15 @@ public class FirstPersonController : MonoBehaviour
             sprintToggled = false;
         }
         else if (isCrouching && ((holdToCrouch && !Input.GetKey(crouchKey)) && !duringCrouchAnimation || !holdToCrouch && isSprinting))
+        {
             StartCoroutine(CrouchStand());
+        }
 
     }
 
     private void ApplyFinalMovement()
     {
-        if (!characterController.isGrounded)
+        if (!characterController.isGrounded && !duringCrouchAnimation)
             moveDirection.y -= gravity * Time.deltaTime;
 
         characterController.Move(moveDirection * Time.deltaTime);
@@ -138,6 +145,7 @@ public class FirstPersonController : MonoBehaviour
         timeBetweenCrouches = 0;
         duringCrouchAnimation = true;
         isCrouching = !isCrouching;
+        //animator.SetTrigger("CtrlPressed");
 
         float timeElapsed = 0;
         float targetHeight = isCrouching ? crouchingHeight : standingHeight;
